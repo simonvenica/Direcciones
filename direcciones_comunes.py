@@ -18,7 +18,7 @@ class direccion:
 			texto.replace("  "," ")
 		return texto
 
-	def ultimo_digito(lista_direccion,digito): #devuelve True en caso de que el digito sea el ultimo digito en la lista de palabras
+	def ultimo_digito(self,lista_direccion,digito): #devuelve True en caso de que el digito sea el ultimo digito en la lista de palabras
 		lista_digitos = []
 		for palabra in lista_direccion:
 			if palabra.replace("n","").isdigit():
@@ -27,7 +27,7 @@ class direccion:
 			return True
 		return False
 
-	def buscar_altura(lista_direccion): #Busca la altura, devuelve su posicion en la lista de palabras, si no la encuentra devuelve 0
+	def buscar_altura(self,lista_direccion): #Busca la altura, devuelve su posicion en la lista de palabras, si no la encuentra devuelve 0
 	
 		contador_numeros = 0
 		for i in range(len(lista_direccion)): #Si la direccion tiene una sola palabra que sean digitos, la considera como altura y termina el proceso devolviendo su posicion.
@@ -63,7 +63,7 @@ class direccion:
 		return 0
 			
 	
-	def intentar_corregir_direccion(direccion): #Intenta corregir la direccion por si no encuentra la altura por un error de espacios (EJ: Santa Fe575)
+	def intentar_corregir_direccion(self,direccion): #Intenta corregir la direccion por si no encuentra la altura por un error de espacios (EJ: Santa Fe575)
 		hay_digitos = False
 		lista_digitos = []
 		digito = ""
