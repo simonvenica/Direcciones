@@ -87,6 +87,9 @@ def intentar_corregir_direccion(direccion): #Intenta corregir la direccion por s
 		
 
 def proceso_direcciones():
+	calle = ""
+	altura = ""
+	datos_extras = "" 
 	direccion = raw_input("Direccion a separar: ")
 	direccion = limpiar_texto(direccion)
 	lista_direccion = direccion.split(" ")
